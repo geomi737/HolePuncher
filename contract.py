@@ -22,16 +22,18 @@ class RegUserCall(TypedDict):
 class GetUsersCall(TypedDict):
     type: Calls
 
-class GetUsersAnswer(TypedDict):
-    content: dict[str, tuple[str, int]]
 
 class HolePunchCall(TypedDict):
     type: Calls
 
 class Ping(TypedDict):
     type: Calls
+    content: str
 
 # Server
+class GetUsersAnswer(TypedDict):
+    content: dict[str, tuple[str, int]]
+
 class DeleteUserAnswer(TypedDict):
     type: Answers
     content: str
